@@ -1,0 +1,644 @@
+body {
+    background: #fff;
+    font-family: 'Cabin', sans-serif;
+}
+
+/* icons */
+
+@font-face {
+    font-family: 'icons';
+    src:url('fonts/icomoon.eot?qqf35q');
+    src:url('fonts/icomoon.eot?#iefixqqf35q') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?qqf35q') format('truetype'),
+        url('fonts/icomoon.woff?qqf35q') format('woff'),
+        url('fonts/icomoon.svg?qqf35q#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+    content: "\e900";
+}
+.icon-arrow-left:before {
+    content: "\e901";
+}
+.icon-arrow-right:before {
+    content: "\e902";
+}
+.icon-arrow-up:before {
+    content: "\e903";
+}
+.icon-reports:before {
+    content: "\e60b";
+}
+.icon-phone:before {
+    content: "\e60a";
+}
+.icon-message:before {
+    content: "\e609";
+}
+.icon-logout:before {
+    content: "\e608";
+}
+.icon-home:before {
+    content: "\e607";
+}
+.icon-help:before {
+    content: "\e606";
+}
+.icon-expenses:before {
+    content: "\e605";
+}
+.icon-download:before {
+    content: "\e604";
+}
+.icon-document:before {
+    content: "\e603";
+}
+.icon-delete:before {
+    content: "\e602";
+}
+.icon-calendar:before {
+    content: "\e601";
+}
+.icon-add:before {
+    content: "\e600";
+}
+
+.icon-alert:before {
+    content: "\e904";
+}
+
+/*END icons */
+
+/* login page style */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.login {
+    background-image: url("../images/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#login-first {
+    overflow: hidden;
+}
+
+#welcome-message {
+    overflow: hidden;
+}
+
+.account {
+    margin-top: 7em;
+    padding: 40px 20px 20px 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+    min-height: 515px;
+    min-width: 440px;
+    overflow: hidden;
+    border: 2px solid #000000;
+}
+
+.slogan-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+}
+
+.form-login {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-login .checkbox {
+    margin-bottom: 10px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.form-login .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-login .form-control:focus {
+    z-index: 2;
+}
+
+.form-login input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-login input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.need-help {
+    margin-top: 10px;
+}
+
+.account-message {
+    margin-top: 5em;
+    padding: 40px 20px 20px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+    margin-bottom: 15em;
+}
+
+.account-message p {
+    margin-top: -20px;
+}
+
+.welcome-name {
+    font-weight: bold;
+}
+
+.welcome-small {
+    font-size: 12px;
+}
+
+.welcome-signature {
+    height: 2.5em;
+}
+
+.welcome-photo {
+    height: 4em;
+    margin-top: -10px;
+    width: 100%
+}
+
+.welcome-break {
+    border: 2px solid #f45942;
+    width: 100%;
+}
+
+/* END login page style */
+
+/* dashboard */
+
+.dashboard-logo{
+    width: 100%;
+    max-height: 8.5em;
+}
+
+.dashboard-logo > a > img {
+    margin-top: 1em;
+    max-height: 8em;
+}
+
+.dashboard-consultant {
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 1em;
+    text-align: center;
+    border: 1px solid #000000;
+    min-height: 550px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.dashboard-consultant-info {
+    margin-top: 1em;
+}
+
+.dashboard-consultant-img {
+    height: 10em;
+    border-radius: 50%;
+    margin-top: 1em;
+}
+
+.dashboard-consultant h2 {
+    color: #000000;
+}
+
+.dashboard-consultant h3 {
+    color: #000000;
+}
+
+.dashboard-consultant label {
+    color: #000000;
+}
+
+.dashboard-consultant span {
+    color: #000000;
+}
+
+.message-area {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.send-btn {
+    width: 35%;
+    margin-bottom: 2em;
+}
+
+.dashboard-top-nav {
+    margin-top: 1em;
+}
+
+.dashboard-slogan {
+    height: 2em;
+    float: left;
+    margin-top: 1.5em;
+    margin-left: 10em;
+}
+
+.navbar-top {
+    margin-bottom: 0;
+    min-height: 67px;
+    border-bottom: 1px solid #000000;
+    margin-left: -30px;
+}
+
+.navbar-bottom {
+    margin-bottom: 0;
+    margin-left: -30px;
+}
+
+.see-all {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.dashboard-tab-logo > a > img {
+    height: 8em;
+}
+
+.dashboard-tab-message {
+    margin-top: 3em;
+}
+
+.dashboard-sidebar-accordion {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.dashboard-consultant-accordion {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.dashboard-overview-content {
+    padding-right: 0;
+}
+
+/* bootstrap navbar */
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+.navbar-default .navbar-brand {
+  color: #000000;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #000000;
+}
+.navbar-default .navbar-text {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #000000;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent/*#030840*/;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #000000;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent/*#ffffff*/;
+}
+.navbar-default .navbar-link {
+  color: #000000;
+}
+.navbar-default .navbar-link:hover {
+  color: #000000;
+}
+/*end bootstrap navbar */
+
+/*END dashboard */
+
+/* Expense styles */
+
+.expense-panel {
+    padding-right: 0;
+}
+
+.expense-add {
+    background-color: #030840;
+    border: 1px solid #b90508;
+    border-radius: 50%;
+    font-size: 3rem;
+    margin-top: -.5rem;
+}
+
+.expense-line {
+    border: 1px solid #b90508;
+    margin-bottom: 10px;
+}
+
+.expense-add-expense {
+    border-top: 1px solid gray;
+    margin-top: 1em;
+}
+
+.add-expense-receipt {
+    margin-top: 5em;
+}
+
+.expense-img-upload {
+    max-height: 10em;
+    text-align: right;
+}
+
+#upload {
+    height: 10em;
+    max-width: 20em;
+}
+
+.receipt {
+    border-bottom: none;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+}
+textarea {
+    background-color: transparent;
+}
+
+/* END expense styles */
+
+/* Reports Styles */
+
+.reports-panel {
+    padding-right: 0;
+}
+
+/* END reports styles */
+
+/* Documents styles */
+
+.document-panel {
+    padding-right: 0;
+}
+
+.document-lineup {
+    margin-top: 10px;
+}
+    
+/* END documents styes */
+
+/* Help styles */
+
+.help-panel {
+    padding-right: 0;
+}
+
+/* END help styles */
+
+/* footer */
+
+.footer > img {
+    width: 100%;
+}
+
+/* END footer */
+
+/* bootstrap override class */
+
+.navbar-border-radius {
+    border-radius: 0;
+}
+
+.navbar-top-border-radius {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.navbar-bottom-border-radius {
+    border-bottom-right-radius: 4px;
+}
+
+.navbar-text-margin {
+    margin-top: 1.7em;
+}
+
+.navbar-a-margin {
+    margin-top: .5em;
+}
+
+.navbar-collapse-padding {
+    padding-left: 0px;
+}
+
+.btn-danger-width {
+    width: 100%;
+}
+
+/* END override class */
+
+/* generic style class */
+
+.margin-top {
+    margin-top: 1em;
+}
+
+.margin-bottom {
+    margin-bottom: 1em;
+}
+
+.main-color-bg {
+    color: white!important;
+    background-color: #000000!important;
+}
+
+.top {
+    top: 3px;
+}
+
+.float-right {
+    float: right;
+}
+
+.glyphicon-green {
+    color: green;
+}
+
+.glyphicon-red {
+    color: red;
+}
+
+.glypicon-white {
+    color: white;
+}
+
+.disable-hover {
+    pointer-events: none;
+}
+
+.logout-hover:hover {
+    background-color: transparent !important;
+    color: red !important;
+}
+
+.icon-bold {
+    font-weight: bold;
+}
+
+.dollar-sign:before {
+    content:"$";
+}
+
+.input-width-1 {
+    width: 31%;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+
+/* END generic style class */
+
+/* media queries */
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #000000;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+    .input-width-1 {
+        width: 24.2%;
+    }
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+    .dashboard-logo > a > img {
+        width: 100%;
+    }
+    .dashboard-consultant {
+        margin-top: 1.5em;
+    }
+    .dashboard-slogan {
+        margin-left: 7em;
+    }
+    .dashboard-overview-content {
+        padding-right: 0;
+    }
+    .login-logo {
+        height: 3em;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .dashboard-slogan {
+        margin-left: 6em;
+    }
+    .navbar-top {
+        margin-left: 0;
+    }
+    .navbar-bottom {
+        margin-left: 0;
+    }
+    .navbar-bottom-border-radius {
+        border-bottom-left-radius: 4px;
+    }
+    .dashboard-consultant {
+        min-height: 350px;
+        border-top-right-radius: 4px;
+    }
+    .dashboard-overview-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .input-width-1 {
+        width: 18%;
+    }
+    .expense-panel {
+        padding-left: 0;
+    }
+    .reports-panel {
+        padding-left: 0;
+    }
+    .document-panel {
+        padding-left: 0;
+    }
+    .help-panel {
+        padding-left: 0;
+    }
+    .login-logo {
+        height: 2em;
+    }
+    .account {
+        margin-top: 4em;
+    }
+}
+/* END media queries */

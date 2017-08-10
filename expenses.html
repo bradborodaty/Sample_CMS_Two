@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <title>Sample CMS | Expenses</title>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="hidden-md hidden-lg col-sm-12 text-center dashboard-tab-logo">
+                <a href="#"><img src="images/fake-logo.png" alt="" /></a>
+            </div>
+            <div class="col-sm-12 col-md-9 col-md-push-3 col-lg-9 col-lg-push-3 dashboard-overview">
+                <div class="dashboard-top-nav">
+                    <nav class="navbar navbar-default navbar-top navbar-border-radius navbar-top-border-radius">
+                       <div class="row">
+                        <div class="col-md-12">
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                              <p class="navbar-text navbar-text-margin">Welcome Mark</p>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav navbar-right">
+                                <li><a class="navbar-a-margin logout-hover" href="login.html">Logout <span class="icon-logout" aria-hidden="true"></span></a></li>
+                              </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div>
+                      </div><!-- /.row -->
+                    </nav>
+                </div><!-- /.top-nav -->
+                <div class="dashboard-bottom-nav">
+                    <nav class="navbar navbar-default navbar-bottom navbar-border-radius navbar-bottom-border-radius">
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-collapse-padding" id="bs-example-navbar-collapse-2">
+                          <ul class="nav navbar-nav">
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li class="active"><a href="expenses.html">Expenses</a></li>
+                            <li><a href="reports.html">Reports</a></li>
+                            <li><a href="destinations.html">Destinations</a></li>
+                            <li><a href="help.html">Help</a></li>
+                          </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div><!-- /.bottom-nav -->
+                <div class="panel-group hidden-md hidden-lg dashboard-sidebar-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading main-color-bg" role="tab" id="headingOne">
+                            <h3 class="panel-title">
+                            Your Travel Manager
+                            <a class="float-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Contact <span class="icon-phone"></span>
+                            </a>
+                            </h3>
+                        </div><!-- .panel-heading -->
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="row dashboard-consultant-accordion">
+                                    <div class="col-sm-6">
+                                        <img src="images/headshot.jpg" alt="" class="dashboard-consultant-img" />
+                                        <h3>Bob Smith</h3>
+                                        <label><b>Email:</b></label> <span type="email">bobsmith@gmail.com</span><br/>
+                                        <label><b>Phone:</b></label> <span type="tel">555-555-5555</span>
+                                    </div>
+                                    <div class="col-sm-6 dashboard-tab-message">
+                                        <label> Need help planning your next trip? Let me know how I can help below </label>
+                                        <textarea rows="4" placeholder="Write your message here..." class="form-control message-area"></textarea><br/>
+                                        <button type="button" class="btn btn-danger send-btn">Send</button>
+                                    </div>
+                                </div><!-- .row -->
+                            </div><!-- .panel-body -->
+                        </div><!-- .panel-collapse -->
+                    </div><!-- .panel -->
+                </div><!-- .panel-group -->
+                <div class="col-sm-12 col-md-12 expense-panel margin-top">
+                    <div class="panel panel-default">
+                        <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title"><span class="icon-expenses"></span>Travel Expenses<a href="reports/review-reports.html" id="next" style="display:none;" class="pull-right">Next <span class="icon-arrow-right"></span></a></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="text-left">
+                                <a href="expenses/add-expense.html"><button type="button" class="btn btn-danger">Add Travel Expense <span class="icon-add"></span></button></a>
+                                <a href="destinations.html"><button type="button" class="btn btn-danger">View Destinations <span class="icon-document"></button></span></a>
+                                <hr class="expense-line"></hr><!-- .expense-line -->
+                                <label>Select to Submit Travel Expenses</label>
+                                <table class="table table-striped table-bordered table-responsive">
+                                    <tr>
+                                        <th>Select All <input type="checkbox" name="c1" id="selectall" onclick="checkAll(this)" /></th>
+                                        <th>Travel Expense Type</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr id="expenseRow1">
+                                        <td class="text-center"><input type="checkbox" name="c1" onclick="showMe('next')" /></td>
+                                        <td>Travel Event - Lorem ipsum dolor</td>
+                                        <td>July 27th, 2017</td>
+                                        <td>$200.00</td>
+                                        <td><a href="expenses/travel-expense.html"><button type="button" class="btn btn-primary">Edit</button></a></td>
+                                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".expense-1">Delete</button></td>
+                                    </tr>
+                                    <tr id="expenseRow2">
+                                        <td class="text-center"><input type="checkbox" name="c1" onclick="showMe('next')" /></td>
+                                        <td>Travel Event - Lorem ipsum dolor</td>
+                                        <td>July 25th, 2017</td>
+                                        <td>$100.00</td>
+                                        <td><a href="expenses/travel-expense.html"><button type="button" class="btn btn-primary">Edit</button></a></td>
+                                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".expense-2">Delete</button></td>
+                                    </tr>
+                                    <tr id="expenseRow3">
+                                        <td class="text-center"><input type="checkbox" name="c1" onclick="showMe('next')" /></td>
+                                        <td>Travel Event - Lorem ipsum dolor</td>
+                                        <td>July 22th, 2017</td>
+                                        <td>$367.36</td>
+                                        <td><a href="expenses/travel-expense.html"><button type="button" class="btn btn-primary">Edit</button></a></td>
+                                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".expense-3">Delete</button></td>
+                                    </tr>
+                                    <tr id="expenseRow4">
+                                        <td class="text-center"><input type="checkbox" name="c1" onclick="showMe('next')" /></td>
+                                        <td>Travel Event - Lorem ipsum dolor</td>
+                                        <td>July 21th, 2017</td>
+                                        <td>$50.12</td>
+                                        <td><a href="expenses/travel-expense.html"><button type="button" class="btn btn-primary">Edit</button></a></td>
+                                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".expense-4">Delete</button></td>
+                                    </tr>
+                                    <tr id="expenseRow5">
+                                        <td class="text-center"><input type="checkbox" name="c1" onclick="showMe('next')" /></td>
+                                        <td>Travel Event - Lorem ipsum dolor</td>
+                                        <td>July 20th, 2017</td>
+                                        <td>$15.00</td>
+                                        <td><a href="expenses/travel-expense.html"><button type="button" class="btn btn-primary">Edit</button></a></td>
+                                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".expense-5">Delete</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div><!-- .panel -->
+                </div><!-- .expense-panel -->
+                <div class="modal fade expense-1" tab-index="-1" role="dialog" aria-labelledby="smallModal">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="smallModal">Delete Expense</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>Are you sure you want to delete this expense?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" onclick="expenseRemove1()" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .modal expense-1 -->
+                <div class="modal fade expense-2" tab-inde="-1" role="dialog" aria-labelledby="smallModal">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="smallModal">Delete Expense</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>Are you sure you want to delete this expense?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" onclick="expenseRemove2()" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .modal expense-2 -->
+                <div class="modal fade expense-3" tab-index="-1" role="dialog" aria-labelledby="smallModal">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="smallModal">Delete Expense</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>Are you sure you want to delete this expense?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" onclick="expenseRemove3()" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .modal expense-3 -->
+                <div class="modal fade expense-4" tab-index="-1" role="dialog" aria-labelledby="smallModal">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="smallModal">Delete Expense</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>Are you sure you want to delete this expense?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" onclick="expenseRemove4()" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .modal expense-4 -->
+                <div class="modal fade expense-5" tab-index="-1" role="dialog" aria-labelledby="smallModal">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="smallModal">Delete Expense</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p>Are you sure you want to delete this expense?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" onclick="expenseRemove5()" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .modal expense-5 -->
+            </div>
+            <div class="hidden-sm col-md-offset-0 col-md-3 col-md-pull-9 col-lg-3 col-lg-pull-9 dashboard-sidebar">
+                <div class="dashboard-logo">
+                    <a href="#"><img src="images/fake-logo.png" alt="" /></a>
+                </div>
+                <div class="dashboard-consultant">
+                    <h2> Your Travel Manager </h2>
+                    <img src="images/headshot.jpg" alt="" class="dashboard-consultant-img" />
+                    <h3>Bob Smith</h3>
+                    <label><b>Email:</b></label> <span type="email">bobsmith@gmail.com</span><br/>
+                    <label><b>Phone:</b></label> <span type="tel">555-555-55555</span><br/>
+                    <label> Need help planning your next trip? Let me know how I can help below </label>
+                    <textarea rows="4" placeholder="Write your message here..." class="form-control message-area"></textarea><br/>
+                    <button type="button" class="btn btn-danger send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function showMe (next) {
+            var chboxs = document.getElementsByName("c1");
+            for(var i=0;i<chboxs.length;i++) { 
+                if(chboxs[i].checked){
+                    document.getElementById('next').style.display = "block";
+                    break;
+                }
+                else {
+                    document.getElementById('next').style.display = "none";
+                }
+            }
+        }
+        function checkAll(ele) { 
+            var checkboxes = document.getElementsByTagName('input');
+            if (ele.checked) {
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].type == 'checkbox') {
+                        checkboxes[i].checked = true;
+                        document.getElementById('next').style.display = "block";
+                    }
+                }
+            } else {
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].type == 'checkbox') {
+                        checkboxes[i].checked = false;
+                        document.getElementById('next').style.display = "none";
+                    }
+                }
+            }  
+        }
+        function expenseRemove1 () {
+            var btn = document.getElementById('expenseBtn');
+            document.getElementById('expenseRow1').remove();
+            this.remove();
+        }
+        function expenseRemove2 () {
+            var btn = document.getElementById('expenseBtn');
+            document.getElementById('expenseRow2').remove();
+            this.remove();
+        }
+        function expenseRemove3 () {
+            var btn = document.getElementById('expenseBtn');
+            document.getElementById('expenseRow3').remove();
+            this.remove();
+        }
+        function expenseRemove4 () {
+            var btn = document.getElementById('expenseBtn');
+            document.getElementById('expenseRow4').remove();
+            this.remove();
+        }
+        function expenseRemove5 () {
+            var btn = document.getElementById('expenseBtn');
+            document.getElementById('expenseRow5').remove();
+            this.remove();
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+//@include icon-font('raiicons', inline-font-files('raiicons/raiicons.woff', woff, 'raiicons/raiicons.ttf', truetype, 'raiicons/raiicons.svg', svg, 'raiicons/raiicons.eot', eot));
+//@include icon-font('raiicons', inline-font-files('../rai/shared/fonts/ico/icomoon.woff', woff, '../rai/shared/fonts/ico/icomoon.ttf', truetype, '../rai/shared/fonts/ico/icomoon.svg', svg, '../rai/shared/fonts/ico/icomoon.eot', eot));
+
+
+@font-face {
+    font-family: 'raiicons';
+    src:url('sass/rai/shared/fonts/ico/icomoon.eot?qqf35q');
+    src:url('sass/rai/shared/fonts/ico/icomoon.eot?#iefixqqf35q') format('embedded-opentype'),
+        url('sass/rai/shared/fonts/ico/icomoon.ttf?qqf35q') format('truetype'),
+        url('sass/rai/shared/fonts/ico/icomoon.woff?qqf35q') format('woff'),
+        url('sass/rai/shared/fonts/ico/icomoon.svg?qqf35q#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'raiicons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+    content: "\e900";
+}
+.icon-arrow-left:before {
+    content: "\e901";
+}
+.icon-arrow-right:before {
+    content: "\e902";
+}
+.icon-arrow-up:before {
+    content: "\e903";
+}
+.icon-reports:before {
+    content: "\e60b";
+}
+.icon-phone:before {
+    content: "\e60a";
+}
+.icon-message:before {
+    content: "\e609";
+}
+.icon-logout:before {
+    content: "\e608";
+}
+.icon-home:before {
+    content: "\e607";
+}
+.icon-help:before {
+    content: "\e606";
+}
+.icon-expenses:before {
+    content: "\e605";
+}
+.icon-download:before {
+    content: "\e604";
+}
+.icon-document:before {
+    content: "\e603";
+}
+.icon-delete:before {
+    content: "\e602";
+}
+.icon-calendar:before {
+    content: "\e601";
+}
+.icon-add:before {
+    content: "\e600";
+}
+
+.icon-alert:before {
+    content: "\e904";
+}
